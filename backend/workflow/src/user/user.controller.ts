@@ -28,7 +28,7 @@ export class UserController {
                 message: 'User Already Exists'
             });
         }
-        else{
+        else{   
                     
         const HashPassword = await bcrypt.hash(data.password, 10);
         data.password = HashPassword;
