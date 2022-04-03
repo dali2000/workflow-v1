@@ -1,6 +1,6 @@
 
 
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class User {
@@ -13,7 +13,8 @@ export class User {
 
   @Column()
   lastName: string;
-  @Column()
+  
+  @Column({unique: true})
   Email: string;
 
   @Column()
@@ -21,7 +22,14 @@ export class User {
 
   @Column()
   password: string;
-  
+
+  @Column()
+  location: string;
+
   @Column({ default: true })
   isActive: boolean;
+}
+
+function Primary() {
+  throw new Error('Function not implemented.');
 }

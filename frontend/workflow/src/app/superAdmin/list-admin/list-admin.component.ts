@@ -22,5 +22,12 @@ export class ListAdminComponent implements OnInit {
       console.log(res);
     });
   }
+  deleteAdmin(id:any) {
+    this.http.delete('http://localhost:3000/user/deleteUser/' + id).subscribe(res => {
+      this.getAllAdmin();
+      console.log(res)
+    });
+    
+  }
 
 }
