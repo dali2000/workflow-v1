@@ -1,6 +1,7 @@
 <div class="container">
     <div class="d-flex flex-row-reverse bd-highlight">
-    <button id="btn"   class="btn btn-outline-primary" routerLink="/liste_admin"><i class='bx bxs-user-plus'></i> Liste Admin</button>
+        <button id="btn" class="btn btn-outline-primary" routerLink="/liste_admin"><i class='bx bxs-user-plus'></i>
+            Liste Admin</button>
     </div>
     <div class="box">
         <img src="../../assets/img/logo.png" alt="" srcset="" class="logo">
@@ -8,7 +9,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="firstName" name="firstName" [(ngModel)]="form.firstName" [class.test]="test2">
+                <input type="text" placeholder="firstName" name="firstName" [(ngModel)]="form.firstName"
+                    [class.test]="test2">
             </div>
         </div>
         <div class="error">
@@ -17,7 +19,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <input type="text" placeholder="lastName" name="lastName" [(ngModel)]="form.lastName" [class.test]="test3">
+                <input type="text" placeholder="lastName" name="lastName" [(ngModel)]="form.lastName"
+                    [class.test]="test3">
             </div>
         </div>
         <div class="error">
@@ -32,7 +35,7 @@
         <div class="error">
             {{message}}
         </div>
-        
+
         <div class="row">
             <div class="col-md-12">
                 <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password"
@@ -52,16 +55,37 @@
                 </select>
             </div>
         </div>
-        
+
         <br>
-        
+
         <div class="row">
             <div class="col-md-12">
-                <button class="btn btn-primary btn1" (click)="AddAdmin()">
+                <button class="btn btn-primary btn1" (click)="AddAdmin()"  data-toggle="modal"
+                data-target="#exampleModal">
                     Ajouter
                 </button>
             </div>
         </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Employée</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="click()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/img/check.png" alt="" srcset="" class="logo1" *ngIf="!check">
+                    <img src="../../assets/img/error.png" alt="" srcset="" class="logo1" *ngIf="check">
+                    <h5 *ngIf="!check">Employée added succesfuly</h5>
+                    <h5 *ngIf="check">Failed</h5>
+
+                </div>
+
+            </div>
+        </div>
     </div>
-          </div>
- 
+    </div>
+</div>

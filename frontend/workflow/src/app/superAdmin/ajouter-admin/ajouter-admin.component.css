@@ -36,7 +36,13 @@
     margin-top: 18px;
     
   }
-
+  .logo1 {
+    margin-bottom: 20px;
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 20%;
+  }
   select{
     border-radius: 5px;
     border: none;
