@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+/* eslint-disable prettier/prettier */
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+=======
 import { Body, Controller, Delete, Get, Param, Post, Put, Res } from '@nestjs/common';
+>>>>>>> e3f9bab12a202e9cc63be877e6fe7ec51665a9aa
 import { userDTO } from './user.dto';
 import { UserService } from './user.service';
 import * as bcrypt  from 'bcrypt';

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -6,7 +7,6 @@ import { User } from './user.entity';
 
 @Injectable()
 export class UserService {
-
     constructor(
         @InjectRepository(User)
         private userRepository: Repository<User>,
@@ -16,6 +16,7 @@ export class UserService {
         return await this.userRepository.find()
     }
     async showOne(id: string){
+     
         return await this.userRepository.findOne({where: {id}});
     }
     async showOneByEmail(Email: string){
