@@ -16,6 +16,7 @@ export class AjouterAdminComponent implements OnInit {
     role:'',
     firstName:'',
     lastName:'',
+    location:'',
     }
 
   
@@ -84,5 +85,6 @@ AddAdmin(){
   });
 
       }
+    // console.log(this.form)
   }
 }
