@@ -18,6 +18,9 @@ export class UserService {
     async showOne(id: string){
         return await this.userRepository.findOne({where: {id}});
     }
+    async showOneByEmail(Email: string){
+        return await this.userRepository.findOne({where: {Email}});
+    }
     async create(data:userDTO){
         const user = await this.userRepository.create(data);
         await this.userRepository.save(user);
@@ -31,4 +34,7 @@ export class UserService {
         await this.userRepository.delete(id);
         return {deleted: true};
     }
+
+
+    
 }

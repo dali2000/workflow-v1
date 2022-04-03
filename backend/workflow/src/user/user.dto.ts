@@ -4,5 +4,6 @@ export interface userDTO{
     Email: string;
     role: string;
     password: string;
+    location: string;
     isActive: boolean;
 }
