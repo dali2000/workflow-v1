@@ -9,7 +9,19 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  user={
+    Email:'',
+    Password:'',
+  }
   ngOnInit(): void {
   }
+
+  message = ""
+  message1 = ""
+
+  test = false
+  test1 = false
+
+  
 
 }
