@@ -94,8 +94,13 @@ export class UserController {
             throw new BadRequestException('Incorrect Password');
         }
         const jwt = await this.jwtService.signAsync({user: user});
-        return jwt  ;
-
+        res.status(200);
+        res.json({
+            status: '200',
+            message: 'User Logged In',
+            token: jwt,
+        });
+        return res;
     }
     
 }
