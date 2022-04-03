@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   token:any;
   ngOnInit(): void {
   }
-
+    
   message = ""
   message1 = ""
 
