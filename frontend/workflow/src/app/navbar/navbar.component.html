@@ -38,15 +38,15 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" style="color: white;">
                         <i class='bx bxs-user-circle'></i>
-                            Wilbert Bailey
+                            {{user.firstName}} {{user.lastName}}
                     </a>
                     <div class="dropdown-menu list" aria-labelledby="navbarDropdown">
                         <!-- <a class="dropdown-item" href="#">wilbretBailey@gmail.com</a> -->
-                        <a class="dropdown-item" href="#"> Profil <i class='bx bx-user-circle'  style="color:#0076FE;margin-left: 70px ;"></i></a>
+                        <a class="dropdown-item" > Profil <i class='bx bx-user-circle'  style="color:#0076FE;margin-left: 70px ;"></i></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#"> Themes <i class='bx bx-paint-roll' style="color:#0076FE;margin-left: 55px ;"></i></a>
-                        <a class="dropdown-item" href="#">  Settings <i class='bx bx-cog' style="color:#0076FE;margin-left: 55px ;"></i></a>
-                        <a class="dropdown-item" href="#"> Log out <i class='bx bx-log-out-circle' style="color:#0076FE;margin-left: 57px ;"></i></a>
+                        <a class="dropdown-item" > Themes <i class='bx bx-paint-roll' style="color:#0076FE;margin-left: 55px ;"></i></a>
+                        <a class="dropdown-item" >  Settings <i class='bx bx-cog' style="color:#0076FE;margin-left: 55px ;"></i></a>
+                        <a class="dropdown-item" (click)="logout()"> Log out <i class='bx bx-log-out-circle' style="color:#0076FE;margin-left: 57px ;"></i></a>
                     </div>
                 </li>
             </ul>

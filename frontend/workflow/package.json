@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "jwt-decode": "^3.1.2",
     "lord-icon-element": "^3.3.3",
     "lottie-web": "^5.9.1",
     "rxjs": "~6.6.0",
