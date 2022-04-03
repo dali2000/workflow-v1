@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-/* eslint-disable prettier/prettier */
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-=======
-import { Body, Controller, Delete, Get, Param, Post, Put, Res } from '@nestjs/common';
->>>>>>> e3f9bab12a202e9cc63be877e6fe7ec51665a9aa
+import { BadRequestException, Body, Controller, Delete, Get, Param, Post, Put, Res } from '@nestjs/common';
 import { userDTO } from './user.dto';
 import { UserService } from './user.service';
 import * as bcrypt  from 'bcrypt';
 import { Response } from 'express';
 import { User } from './user.entity';
+import { JwtService } from '@nestjs/jwt/dist/jwt.service';
+
 @Controller('user')
 export class UserController {
-    constructor (private UserService: UserService) {
+    constructor (private UserService: UserService,private jwtService: JwtService) {
 
     }
    
@@ -86,6 +83,19 @@ export class UserController {
             
 
         }
+    }
+    @Post('login')
+    async login(@Body() data:userDTO,@Res ({passthrough: true}) res: Response){
+        const user = await this.UserService.showOneByEmail(data.Email);
+        if(!user){
+            throw new BadRequestException('User does not exist');
+        }
+        if(!await bcrypt.compare(data.password, user.password)){
+            throw new BadRequestException('Incorrect Password');
+        }
+        const jwt = await this.jwtService.signAsync({user: user});
+        return jwt  ;
+
     }
     
 }
