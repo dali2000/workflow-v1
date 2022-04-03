@@ -1,0 +1,58 @@
+<div class="container">
+    
+    <div class="box">
+        <img src="../../assets/img/logo.png" alt="" srcset="" class="logo">
+        <h3>Sign Up to Easy Flow</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password"
+                    [class.test1]="test1">
+            </div>
+        </div>
+        <div class="error">
+            {{message1}}
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="password" placeholder="Confirm Password" name="ConfrimPassword"
+                    [(ngModel)]="confrimPassword" [class.test]="test">
+
+            </div>
+        </div>
+        <div class="error">
+            {{message}}
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="">You have account?</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn1" (click)="login()">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+
+        <hr>
+        <h5>or</h5>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn2">
+                    <i class="bx bxl"><img src="../../assets/img/google_icon.png" alt="" srcset="" class="icon"></i>
+                    <i class='bx bxl-google' style="float: left; margin-left: 10px;margin-top: 5px;"></i>
+                    Continue with google
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

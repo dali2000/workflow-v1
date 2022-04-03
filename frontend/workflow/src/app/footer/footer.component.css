@@ -1,0 +1,22 @@
+.box{
+    width: 100%;
+    padding: 15px;
+    position:absolute;
+    bottom:0;
+    height:50px;
+    text-align: center;
+    font-size: 12px;
+    padding:10px
+}
+@media screen and (max-width: 414px) {
+    .box {
+        background-color: rgb(247, 247, 247);
+    }
+
+  }
+  @media screen and (max-width: 820px) {
+    .box {
+        background-color: rgb(247, 247, 247);
+    }
+
+  }

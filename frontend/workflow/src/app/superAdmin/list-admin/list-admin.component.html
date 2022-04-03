@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="d-flex justify-content-end">
+
+    <button class="btn btn-outline-primary" routerLink="/ajouter_admin"> Add Admin</button>
+  </div>
+  <div class="list">
+    <div class="list-nav">
+
+
+      <div class="d-flex justify-content-start">
+        <p>Admin list <i class='bx bx-user'></i></p>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="col-md-3" *ngFor="let admin of admins;">
+
+        <div class="card">
+          <div class="card-img">
+            <img src="../assets/img/photo_profil.jpg" class="card-img-top">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{admin.firstName}}</h5>
+            <div class="card-body-buttom">
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-outline-primary" id="btn1" routerLink="/UserProfil/{{admin.id}}">Consult</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-primary"> execlude</button>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="d-flex flex-row-reverse bd-highlight">
+    <button id="btn"   class="btn btn-outline-primary" routerLink="/liste_admin"><i class='bx bxs-user-plus'></i> Liste Admin</button>
+    </div>
+    <div class="box">
+        <img src="../../assets/img/logo.png" alt="" srcset="" class="logo">
+        <h3>Add Admin</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="email" placeholder="Email" name="email" [(ngModel)]="form.Email" [class.test]="test1">
+            </div>
+        </div>
+        <div class="error">
+            {{message}}
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password"
+                    [class.test1]="test1">
+            </div>
+        </div>
+        <div class="error">
+            {{message1}}
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="form.role">
+                    <option selected>Choose...</option>
+                    <option value="admin">admin</option>
+                    <option value="user">user</option>
+                    <option value="Three">Three</option>
+                </select>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn1" (click)="AddAdmin()">
+                    Ajouter
+                </button>
+            </div>
+        </div>
+    </div>
+          </div>
+ 

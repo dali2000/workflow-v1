@@ -1,0 +1,61 @@
+
+.row{
+    margin-top:2%;
+}
+.list{
+
+    padding:2%;
+}
+.card{
+    width: 15rem;
+}
+.card-img{
+    padding: 5%;
+}
+
+p{
+   font-size:25px;
+  font-weight: bold;
+}
+button{
+    margin-top:2%;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+    
+   .card{
+       width:10rem;
+   }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .card{
+        width:20rem;
+    }
+    .row{
+       
+        margin-top:2%;
+    }
+ }
+ @media screen and (max-width: 393px) {
+    
+    .card{
+        width:18rem;
+    }
+   
+ }
+
+ @media screen and (max-width: 356px) {
+    
+    .row{
+      
+        margin-top:2%;
+    }
+   
+ }
+
+
